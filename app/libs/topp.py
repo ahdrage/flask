@@ -53,9 +53,7 @@ while not fullUrl.endswith('dato/2004/uke/43'):
 	spotifyId =  results['tracks']['items'][0]['id']
 	image = results['tracks']['items'][0]['album']['images'][0]['url']
 
-	with con:
-		cur = con.cursor() 
-		cur.execute("INSERT INTO listing VALUES(?, ?, ?, ?, ?, ?, ?)", (year, weekNumber, artist, title, spotifyUrl, spotifyId, image))
+	
 
 	listing = Listing(
 		year=year,
