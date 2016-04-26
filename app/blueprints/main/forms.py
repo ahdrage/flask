@@ -1,5 +1,5 @@
 
-rom flask.ext.wtf import Form
+from flask.ext.wtf import Form
 from wtforms import BooleanField, SubmitField
 
 
