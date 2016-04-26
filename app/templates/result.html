@@ -1,3 +1,11 @@
+
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Result{% endblock %}
+
+{% block page_content %}
+
 <html>
   
   <body>
@@ -27,12 +35,14 @@
   <strong>Image:</strong> {{ list.Image }} <br>
 
 
+  </body>
+</html>
 
 
-<br>
 {% endfor %}
 
 {% endblock %}
 
-  </body>
-</html>
+{% block scripts %}
+{{ super() }}
+{% endblock %}
