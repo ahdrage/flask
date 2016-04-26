@@ -1,4 +1,11 @@
 
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Page Title Here{% endblock %}
+
+{% block page_content %}
+
 <!-- Form that the user fills out. When the user has submitted the form, he will be redirected to the page results.html where the submitted info will be matched with the info in the database -->
 
 <h1> Fill in form to find the toplist song for that date </h1>
@@ -53,5 +60,10 @@
 </fieldset>
 </form>
 
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}
 
 
