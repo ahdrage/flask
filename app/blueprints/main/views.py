@@ -19,3 +19,8 @@ def update():
 		topp.update_database()
 		return redirect(url_for('main.home'))
 	return render_template('update.html')
+
+@main.route('/results')
+def results():
+	listings = Listing.query.all()
+	return render_template('results.html', listings=listings)
