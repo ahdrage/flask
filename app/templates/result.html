@@ -15,22 +15,22 @@
 
 
 
-<br>
 
-{% block content %}
+
+
 <!-- Just an example connection to database. I guess I somehow need to compare list.Year and so on with user input? -->
 <!-- Each result from the user submit should show title of song, artist, year, week and an image.  -->
-{% for list in listing %}
+{% for lists in listing %}
   
 
 
-  <strong>Year:</strong> {{ list.Year }} <br>
-  <strong>Week:</strong> {{ list.Week }} <br>
-  <strong>Artist:</strong> {{ list.Artist }} <br>
-  <strong>Title:</strong> {{ list.Title }} <br>
-  <strong>SpotifyURL:</strong> {{ list.SpotUrl }} <br>
-  <strong>SpotifyID:</strong> {{ list.SpotID }} <br>
-  <strong>Image:</strong> {{ list.Image }} <br>
+  <strong>Year:</strong> {{ lists.Year }} <br>
+  <strong>Week:</strong> {{ lists.Week }} <br>
+  <strong>Artist:</strong> {{ lists.Artist }} <br>
+  <strong>Title:</strong> {{ lists.Title }} <br>
+  <strong>SpotifyURL:</strong> {{ lists.SpotUrl }} <br>
+  <strong>SpotifyID:</strong> {{ lists.SpotID }} <br>
+  <strong>Image:</strong> {{ lists.Image }} <br>
 
 
 
