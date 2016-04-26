@@ -27,7 +27,9 @@ fullUrl = ""
 
 with con:
 	cur = con.cursor()
-	cur.execute("DROP TABLE IF EXISTS listing")
+	for listing in Listing.query.all():
+    		db.session.delete(listing)
+	db.session.commit()
 	cur.execute("CREATE TABLE listing(Year INT, Week INT, Artist TEXT, Title TEXT, SpotUrl TEXT, SpotID Text, Image TEXT)")
 
 
