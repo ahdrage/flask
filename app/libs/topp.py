@@ -1,5 +1,7 @@
 
 from bs4 import BeautifulSoup
+from app import db
+from app.models import Listing
 
 import requests
 import sqlite3 as lite
