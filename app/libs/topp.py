@@ -57,5 +57,15 @@ while not fullUrl.endswith('dato/2004/uke/43'):
 		cur = con.cursor() 
 		cur.execute("INSERT INTO listing VALUES(?, ?, ?, ?, ?, ?, ?)", (year, weekNumber, artist, title, spotifyUrl, spotifyId, image))
 
-
+	listing = Listing(
+		year=year,
+    		week_number=weekNumber,
+    		artist=artist,
+  		title=title,
+    		spotify_url=spotifyUrl,
+    		spotify_id=spotifyId,
+    		image=image
+	)
+	db.session.add(listing)
+	db.session.commit()
 	
