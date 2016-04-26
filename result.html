@@ -1,0 +1,38 @@
+<html>
+  
+  <body>
+   
+
+
+<!-- For each user input this ID will be replaced with list.SpotID, to generate a play button from spotify for that specific song. -->
+<iframe src="https://embed.spotify.com/?uri=spotify:track:4HDrxZzuL7mQ6qQZFRpw1s" frameborder="0" allowtransparency="true"></iframe>
+
+
+
+<br>
+
+{% block content %}
+<!-- Just an example connection to database. I guess I somehow need to compare list.Year and so on with user input? -->
+<!-- Each result from the user submit should show title of song, artist, year, week and an image.  -->
+{% for list in listing %}
+  
+
+
+  <strong>Year:</strong> {{ list.Year }} <br>
+  <strong>Week:</strong> {{ list.Week }} <br>
+  <strong>Artist:</strong> {{ list.Artist }} <br>
+  <strong>Title:</strong> {{ list.Title }} <br>
+  <strong>SpotifyURL:</strong> {{ list.SpotUrl }} <br>
+  <strong>SpotifyID:</strong> {{ list.SpotID }} <br>
+  <strong>Image:</strong> {{ list.Image }} <br>
+
+
+
+
+<br>
+{% endfor %}
+
+{% endblock %}
+
+  </body>
+</html>
