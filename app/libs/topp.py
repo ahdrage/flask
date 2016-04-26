@@ -59,12 +59,12 @@ def update_database():
 
 		listing = Listing(
 			year=year,
-    			week_number=weekNumber,
-    			artist=artist,
-  			title=title,
-    			spotify_url=spotifyUrl,
-    			spotify_id=spotifyId,
-    			image=image
+			week_number=weekNumber,
+			artist=artist,
+			title=title,
+			spotify_url=spotifyUrl,
+			spotify_id=spotifyId,
+			image=image
 		)
 		db.session.add(listing)
 		db.session.commit()
