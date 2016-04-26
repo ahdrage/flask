@@ -1,0 +1,57 @@
+
+<!-- Form that the user fills out. When the user has submitted the form, he will be redirected to the page results.html where the submitted info will be matched with the info in the database -->
+
+<h1> Fill in form to find the toplist song for that date </h1>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="aar">Choose birth year</label>
+  <div class="col-md-4">
+    <select id="year" name="year" class="form-control">
+      <option value="">1988</option>
+      <option value="">1987</option>
+      <option value="">1986</option>
+    </select>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="maaned">Choose birth month</label>
+  <div class="col-md-4">
+    <select id="month" name="month" class="form-control">
+      <option value="">Jan</option>
+      <option value="">Feb</option>
+      <option value="">Mars</option>
+    </select>
+  </div>
+</div>
+
+<!-- Note, I actually want to use day here. But the info scraped is in weeks. So I need to figure out how to convert the info day/month/year into week number. I found a javascript for it. But for now we can just keep it simple and just use weeks. -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="dag">Choose birth week</label>
+  <div class="col-md-4">
+    <select id="week" name="week" class="form-control">
+      <option value="">44</option>
+      <option value="">45</option>
+      <option value="">46</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="send"></label>
+  <div class="col-md-4">
+    <button id="send" name="send" class="btn btn-primary">Find song!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
