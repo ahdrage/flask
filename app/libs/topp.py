@@ -25,12 +25,10 @@ counter = 0
 tracks = []
 fullUrl = ""
 
-with con:
-	cur = con.cursor()
-	for listing in Listing.query.all():
-    		db.session.delete(listing)
-	db.session.commit()
-	cur.execute("CREATE TABLE listing(Year INT, Week INT, Artist TEXT, Title TEXT, SpotUrl TEXT, SpotID Text, Image TEXT)")
+for listing in Listing.query.all():
+	db.session.delete(listing)
+db.session.commit()
+
 
 
 #script goes until we reach the last page  
