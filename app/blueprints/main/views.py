@@ -18,7 +18,7 @@ def update():
 			return redirect(url_for('main.update'))
 		topp.update_database()
 		return redirect(url_for('main.home'))
-	return render_template('update.html')
+	return render_template('update.html', form=form)
 
 @main.route('/results')
 def results():
