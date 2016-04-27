@@ -1,45 +1,52 @@
 
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-
+​
 {% block title %}Result{% endblock %}
-
+​
 {% block page_content %}
-
-
-
-
-
+​
 <!-- For each user input this ID will be replaced with list.SpotID, to generate a play button from spotify for that specific song. -->
 <iframe src="https://embed.spotify.com/?uri=spotify:track:4HDrxZzuL7mQ6qQZFRpw1s" frameborder="0" allowtransparency="true"></iframe>
-
-
-
-
-
-
+​
 <!-- Just an example connection to database. I guess I somehow need to compare list.Year and so on with user input? -->
 <!-- Each result from the user submit should show title of song, artist, year, week and an image.  -->
 {% for lists in listing %}
-  
-
-
-  <strong>Year:</strong> {{ lists.year }} <br>
-  <strong>Week:</strong> {{ lists.week_number }} <br>
-  <strong>Artist:</strong> {{ lists.artist }} <br>
-  <strong>Title:</strong> {{ lists.title }} <br>
-  <strong>SpotifyURL:</strong> {{ lists.spotify_url }} <br>
-  <strong>SpotifyID:</strong> {{ lists.spotify_id }} <br>
-  <strong>Image:</strong> {{ lists.image }} <br>
-
-
-
-
-
+<table class="table">
+	<tr>
+		<th>Year</th>
+		<td>{{ lists.year }}</td>
+	</tr>
+	<tr>
+		<th>Week</th>
+		<td>{{ lists.week_number }}</td>
+	</tr>
+	<tr>
+		<th>Artist</th>
+		<td>{{ lists.artist }}</td>
+	</tr>
+	<tr>
+		<th>Title</th>
+		<td>{{ lists.title }}</td>
+	</tr>
+	<tr>
+		<th>Spotify URL</th>
+		<td>{{ lists.spotify_url }}</td>
+	</tr>
+	<tr>
+		<th>Spotify ID</th>
+		<td>{{ lists.spotify_id }}</td>
+	</tr>
+	<tr>
+		<th>Image</th>
+		<td>{{ lists.image }}</td>
+	</tr>
+</table>
+​
 {% endfor %}
-
+​
 {% endblock %}
-
+​
 {% block scripts %}
 {{ super() }}
 {% endblock %}
