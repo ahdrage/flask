@@ -52,7 +52,8 @@ def update_database():
 
 		results = s_client .search(title, limit=1)
 		spotifyUrl = results['tracks']['items'][0]['preview_url']
-		spotifyId =  results['tracks']['items'][0]['id']
+		spotId = results['tracks']['items'][0]['id']
+		spotifyId =  "https://embed.spotify.com/?uri=spotify:track:" + spotId
 		image = results['tracks']['items'][0]['album']['images'][0]['url']
 
 	
