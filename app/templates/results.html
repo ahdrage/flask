@@ -6,8 +6,7 @@
 ​
 {% block page_content %}
 ​
-<!-- For each user input this ID will be replaced with list.SpotID, to generate a play button from spotify for that specific song. -->
-<iframe src="https://embed.spotify.com/?uri=spotify:track:4HDrxZzuL7mQ6qQZFRpw1s" frameborder="0" allowtransparency="true"></iframe>
+
 ​
 <!-- Just an example connection to database. I guess I somehow need to compare list.Year and so on with user input? -->
 <!-- Each result from the user submit should show title of song, artist, year, week and an image.  -->
@@ -29,18 +28,12 @@
 		<th>Title</th>
 		<td>{{ lists.title }}</td>
 	</tr>
-	<tr>
-		<th>Spotify URL</th>
-		<td>{{ lists.spotify_url }}</td>
-	</tr>
+	
 	<tr>
 		<th>Spotify ID</th>
-		<td>{{ lists.spotify_id }}</td>
+		<td><iframe src="{{ lists.spotify_id }}" frameborder="0" allowtransparency="true"></iframe></td>
 	</tr>
-	<tr>
-		<th>Image</th>
-		<td>{{ lists.image }}</td>
-	</tr>
+	
 </table>
 ​
 {% endfor %}
